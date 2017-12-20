@@ -1,0 +1,80 @@
+Wesley Loo
+ID: 912907097
+ECS175, Project 4
+
+Sources consulted with partial code adapted:
+https://stackoverflow.com/questions/20333914/how-to-correctly-fill-a-list-of-list-in-c
+
+__________________________________________________________
+MANUAL:
+
+TO COMPILE: run Makefile. The only cpp file needed is loo_wesley_p4.cpp.
+MAC OSX users may need to uncomment an include in the cpp file, as well as the appropriate OpenGL flags in the Makefile. 
+NOTE: The -lGLEW flag was not included with the Linux compile flags because Fedora (my PC, not the CSIF) couldn't seem to find the correct libraries/files associated with the flag, even after installing everything it suggested.
+The program seems to run fine without it.
+
+TO RUN: ./whloo_p4
+The program will open a points.txt file if it exists, otherwise it will create a new points.txt file upon saving the scene.
+If the points.txt file does not exist, upon startup, there will be a blank scene.
+
+POINTS.TXT Layout:
+
+Number of curves
+
+number of points of curve 1
+point 1
+point 2
+point 3
+
+number of points of curve 2
+point 1
+point 2
+point 3
+
+number of points of curve ...
+______________________________
+
+COLOR SCHEME:
+
+BLUE lines connect the control points.
+RED points are control points.
+GREEN lines are used for the curves.
+A selected control point for modification will be BLACK.
+__________________________________________________________
+
+CONTROLS
+
+To MODIFY points:
+
+Press the 'm' key to enter MODIFY MODE.
+Lift-click on a point to select it, it should change color.
+To move a selected point, simply left-click anywhere else in the scene that is not also a control point.
+Left-clicking a different point will simply select that point.
+While in MODIFY MODE. press the 'd' to DELETE that control point. 
+ 
+To INSERT points: Press the 'i' key to enter INSERT MODE.
+To add a control point to an existing curve, click on an existing control point.
+Left-click to add a point before the selected point (with respect to the sequence of control points).
+Right-click to add a point after the selected point (").
+You can also delete points in this mode, by pressing 'd'.
+
+To create a NEW CURVE: press the 'n' to enter NEW CURVE MODE.
+Simply click anywhere on the scene to create a new curve via a new unconnected control point.
+
+To toggle between BEZIER AND B_SPLINE CURVES, press the 'b' key. The command line will notify you of which curve is currently being shown.
+
+To EDIT info regarding B-SPLINE CURVES: Press the 'e' key.
+You will be asked whether you would like to edit the knot values, or the k-order.
+
+After entering new information, the updated knot value and k-order will be displayed.
+Whenever a point is added or removed from the scene, knot values are reverted to their default to take into the account for the change in the number of points, and thus number of knots.
+Editing the k-order will also cause the knot values to be reset to their default.
+
+To SHOW KNOT INFO and the k-value while in viewing BSPLINE CURVES, press the 's' key.
+
+To KILL (close) the program, press the 'k' key.
+
+_________________________________________________________
+
+
+NOTES: Resizing the window may cause the clicking controls to become slightly inaccurate.
