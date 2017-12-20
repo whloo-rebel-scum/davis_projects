@@ -1,0 +1,46 @@
+Wesley Loo
+ECS175, Project 2
+__________________________________________________________
+MANUAL:
+
+TO COMPILE: run Makefile. The only cpp file needed is loo_wesley_p2.cpp.
+MAC OSX users may need to uncomment an include in the cpp file, as well as the appropriate OpenGL flags in the Makefile.
+NOTE: The -lGLEW flag was not included with the Linux compile flags because Fedora (my PC, not the CSIF) couldn't seem to find the correct libraries/files associated with the flag, even after installing everything it suggested.
+The program seems to run fine without it.
+
+TO RUN: ./whloo_p2 [object text file]
+
+NOTES: Rendering the bunny_scene file is very slow. Other test files with a lot fewer points seems to run fine.
+_________________________________________
+
+CONTROLS:
+
+SELECTING OBJECTS:
+Use the number keys 1-9 to select the corresponding objects to perform transformations on, as described in the object file.
+_________________________________________________________________________________________
+
+
+FUNCTIONS: When the program first starts, the default function selected is TRANSLATE.
+When the appropriate key is pressed, the command line will declare what function was chosen.
+
+To TRANSLATE: press the 't' key.
+The 'w', 'a', 's', 'd' keys correspond to moving up, left, down, right, respectively, on the x and y axis.
+The 'q' and 'z' keys correspond to moving up and down respectively on the z-axis.
+
+To ROTATE: press the 'r' key.
+The 'a' and 'd' keys correspond to rotating the selected object counterclockwise and clockwise respectively about an arbitrary axis. The default axis is has the endpoints {0, 0.5, 0} and {1, 0.5, 0}.
+
+To EDIT ROTATION PARAMETERS: press the 'e' key, when the ROTATE function is selected.
+The console will first state the current rotation axis points and the current rotation angle.
+It will then prompt you to enter the coordinates of two new points that will form another axis.
+Afterwards, it will ask for a new rotation angle (in degrees).
+
+To SCALE: press the 'g' key.
+The 'w' and 's' keys correspond to scaling the object size up or down respectively.
+
+To SAVE the scene: press the 'o' key.
+
+To KILL the program: press the 'k' key.
+
+To view a PROJECTION to either the XY, YZ, or XZ plane: press the 'p' key.
+The command line will then prompt you to enter a 1, 2, or 3, corresponding to a specific plane projection.
