@@ -298,16 +298,8 @@ void reshape(int width, int height)
     glOrtho(0,grid_width,0,grid_height,-10,10);
 
     //clear the modelview matrix
-    //the ModelView Matrix can be used in this project, to change the view on the projection
-    //but you can also leave it alone and deal with changing the projection to a different view
-    //for project 2, do not use the modelview matrix to transform the actual geometry, as you won't
-    //be able to save the results
     glMatrixMode(GL_MODELVIEW);
     glLoadIdentity();
-
-    //set pixel size based on width, if the aspect ratio
-    //changes this hack won't work as well
-    //pixel_size = width/(float)grid_width;
 
     //check for opengl errors
     check();
@@ -602,11 +594,6 @@ void bspline()
 				temp1 = temp2;
 				temp2.clear();
 
-				/*for(it1 = temp1.begin(); it1 != temp1.end(); it1++)
-				{
-					cout << (*it1).x << ", " << (*it1).y;
-				}
-				cout << endl;*/
 			}
 			//store in master list of final curve points?
 			it1 = temp1.begin();
