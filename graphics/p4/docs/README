@@ -1,6 +1,8 @@
 Wesley Loo
 ECS175, Project 4
 
+This a project is a basic curve editor for bezier and b-spline curves, implemented with OpenGL (GLUT).
+__________________________________________________________
 Sources consulted with partial code adapted:
 https://stackoverflow.com/questions/20333914/how-to-correctly-fill-a-list-of-list-in-c
 
